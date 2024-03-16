@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Atividade Lista</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="main.css">
+    <script src='main.js'></script>
+    <script src="https://kit.fontawesome.com/2cb7523f92.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+    <main>
+        <div class="table_header">
+            <h1>Lista Alunos / ISW-008</h1>
+
+            <div class="aprovacao">
+                <h2>Aprovados: <span id="qtdAproved"></span></h2>
+                <h2>Reprovados: <span id="qtdReproved"></span></h2>
+                
+            </div>
+        </div>
+        <div class="table_body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>RA</th>
+                        <th>P1</th>
+                        <th>P2</th>
+                        <th>Média</th>
+                        <th>Aprovação</th>
+                    </tr>
+                </thead>
+                <tbody id="listaAlunos">
+                    <!-- <tr>
+                        <td>Danilo</td>
+                        <td>05646123103</td>
+                        <td class="good"><span>10</span></td>
+                        <td class="bad"><span>10</span></td>
+                        <td class="bad"><span>10</span></td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Danilo</td>
+                        <td>05646123103</td>
+                        <td class="good"><span>10</span></td>
+                        <td class="bad"><span>10</span></td>
+                        <td class="bad"><span>10</span></td>
+                        <td><i class="fa-solid fa-x"></i></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        var lsAluno = createLsAlunos();
+        lista_Siga(lsAluno);
+    </script>
+</body>
+</html>
