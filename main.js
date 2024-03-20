@@ -96,14 +96,15 @@ function createLsAlunos(){
 }
 
 function lista_Siga(lsAluno){
-    var mediaAluno = 0;
+    var mediaAluno, mediaP1, mediaP2, somaP1 = 0, somaP2 = 0;
+    var qtdAproved = 0, qtdReproved = 0;
     var nota = "good"; // or bad
-    var qtdAproved = 0;
-    var qtdReproved = 0;
     var htmlCode = "<tr>";
 
     for(let i = 0; i < lsAluno.length; i++){
         mediaAluno = (lsAluno[i].notaP1 + lsAluno[i].notaP2) / 2;
+        somaP1 += lsAluno[i].notaP1;
+        somaP2 += lsAluno[i].notaP2;
 
         htmlCode += "<td>" + lsAluno[i].nome + "</td>" 
                 +  "<td>" + lsAluno[i].ra + "</td>";
@@ -126,6 +127,14 @@ function lista_Siga(lsAluno){
         }
         htmlCode += "</tr>";
     }
+    mediaP1 = somaP1 / lsAluno.length;
+    mediaP2 = somaP2 / lsAluno.length;
+    let elementP1 = document.getElementById("mediaP1");
+    elementP1.innerHTML = mediaP1.toFixed(2);
+    let elementP2 = document.getElementById("mediaP2");
+    elementP2.innerHTML = mediaP2.toFixed(2);
+
+
     let aproved = document.getElementById("qtdAproved");
     aproved.innerHTML = qtdAproved;
     let reproved = document.getElementById("qtdReproved");
